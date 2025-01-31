@@ -6,6 +6,7 @@ one is to be chosen to get the treasure.
 
 if even a single step is incorrect, GAME OVER
 '''
+import random
 
 print(r'''
 *******************************************************************************
@@ -29,3 +30,48 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 /______/______/______/______/______/______/______/______/______/______/_____ /
 *******************************************************************************
 ''')
+
+p = ['l','r']
+reach_doors = 0
+b = list()
+for i in range(5):
+    b.append(random.choice(p))
+print(b)
+p1 = input('Enter a move as left(l) or right(r): ')
+if p1 == b[0]:
+    p2 = input('Fantastic! Enter your next move as left(l) or right(r): ')
+    if p2 == b[1]:
+        p3 = input('Excellent! Enter your next move as left(l) or right(r): ')
+        if p3 == b[2]:
+            p4 = input('Marvellous! Enter your next move as left(l) or right(r): ')
+            if p4==b[3]:
+                p5 = input('Splendid! Enter your next move as left(l) or right(r): ')
+                if p5==b[4]:
+                    print("Amazing!")
+                    reach_doors = 1
+                else:
+                    print("YOU LOSE >_<")
+            else:
+                    print("YOU LOSE >_<")
+        else:
+                    print("YOU LOSE >_<")
+    else:
+                    print("YOU LOSE >_<")
+else:
+                    print("YOU LOSE >_<")
+
+if reach_doors == 1:
+    print("You have reached the final level of this game\n")
+    f = random.choice([1,2,3])
+    print(f)
+    d = int(input('''There are three doors in front of you:
+1.Left
+2.Middle
+3.Right
+
+Select a door according to its index: '''))
+
+    if d == f:
+        print("You Win!!!! UwU")
+    else:
+        print("You Lose........-_-")
