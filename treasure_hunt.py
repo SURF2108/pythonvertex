@@ -7,7 +7,7 @@ one is to be chosen to get the treasure.
 if even a single step is incorrect, GAME OVER
 '''
 import random
-
+print("\nNOTE: Correct moves displayed Before input. \nPurely for the function of testing, as the map keys are randomised each time the game is started\n")
 print(r'''
 *******************************************************************************
           |                   |                  |                     |
@@ -31,6 +31,8 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 *******************************************************************************
 ''')
 
+
+print("WELCOME TO TREASURE HUNT !!! \n")
 p = ['l','r']
 reach_doors = 0
 b = list()
@@ -47,7 +49,7 @@ if p1 == b[0]:
             if p4==b[3]:
                 p5 = input('Splendid! Enter your next move as left(l) or right(r): ')
                 if p5==b[4]:
-                    print("Amazing!")
+                    print("\nAmazing!\n")
                     reach_doors = 1
                 else:
                     print("YOU LOSE >_<")
@@ -59,19 +61,23 @@ if p1 == b[0]:
                     print("YOU LOSE >_<")
 else:
                     print("YOU LOSE >_<")
-
+print("________________________________________________________________")
 if reach_doors == 1:
-    print("You have reached the final level of this game\n")
+    print("\nYOU HAVE REACHED THE FINAL LEVEL\n")
     f = random.choice([1,2,3])
     print(f)
     d = int(input('''There are three doors in front of you:
-1.Left
-2.Middle
-3.Right
+ _________________   _________________   _________________
+(                 ) (                 ) (                 ) 
+|                 | |                 | |                 |
+|        1        | |        2        | |        3        |
+|                 | |                 | |                 |
+|                 | |                 | |                 |
+(_________________) (_________________) (_________________)
 
-Select a door according to its index: '''))
+Select a door : '''))
 
     if d == f:
-        print("You Win!!!! UwU")
+        print("\nYou Win!!!! UwU")
     else:
-        print("You Lose........-_-")
+        print("\nYou Lose........-_-")
