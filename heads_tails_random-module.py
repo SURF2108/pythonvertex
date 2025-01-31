@@ -1,12 +1,20 @@
 import random as r
 
 print("Welcome! Let's flip a coin.\n")
-
+a = input("Enter H for heads and T for tails: \n")
 b = r.choice(['Heads','Tails'])
 
-print(b)
+if a=='H'or a=='h':
+	if b=='Heads':
+		print("You Win!\n")
+	else:
+		print("You Lose....\n")
 
-a = [1,2,3]
-
-del a[0:]
-print(a)
+elif a=='T'or a=='t':
+	if b=='Heads':
+		print("You Lose....\n")
+	else:
+		print("You Win!\n")
+		
+else:
+	print("Incorrect input.....")

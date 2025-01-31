@@ -3,4 +3,4 @@ l = ['ram','shyam','lakshman','shiva']
 
 a = r.choice(l)
 
-print(a)
+print(a,"will pay for the bill ^_^")
